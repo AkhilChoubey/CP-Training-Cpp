@@ -8,17 +8,18 @@ struct TreeNode
     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right){} *
 };
 
-vector<int> rightView(TreeNode *root)
+vector<vector<int>> zigzagTraversal(TreeNode *root)
 {
     if (root == NULL)
     {
         return {};
     }
 
-    vector<int> result;
+    vector<vector<int>> result;
     vector<int> currentLevel;
 
     queue<TreeNode *> Q;
+
     Q.push(root);
     Q.push(NULL);
 
@@ -29,8 +30,8 @@ vector<int> rightView(TreeNode *root)
 
         if (root == NULL)
         {
-            result.push_back(current[current.size() - 1]);
-            current.clear();
+            result.push_back(currentLevel);
+            currentLevel.clear();
             if (!Q.empty())
             {
                 Q.push(NULL);
@@ -38,7 +39,7 @@ vector<int> rightView(TreeNode *root)
         }
         else
         {
-            current.push_back(root->val);
+            currentLevel.push_back(root->val);
             if (root->left != NULL)
             {
                 Q.push(root->left);
@@ -49,5 +50,14 @@ vector<int> rightView(TreeNode *root)
             }
         }
     }
+
+    for (int i = 0; i < result.size(); i++)
+    {
+        if (i % 2 != 0)
+        {
+            reverse(result[i].begin(), result[i].end());
+        }
+    }
+
     return result;
 }
