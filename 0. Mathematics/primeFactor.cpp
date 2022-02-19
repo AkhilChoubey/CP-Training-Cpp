@@ -17,3 +17,6 @@ vector<int> primeFactors(int n) {
 
     return result;
 }
+
+
+  
