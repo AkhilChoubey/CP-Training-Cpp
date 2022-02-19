@@ -27,7 +27,7 @@ int firstOccurance(vector<int> &nums, int target)
             }
             else
             {
-                end = mid - 1;
+                start = mid + 1;
             }
         }
     }
