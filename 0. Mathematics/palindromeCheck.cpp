@@ -14,11 +14,11 @@ bool isPalindrome(int n) {
 
 //method 2 : reverse second half of the number and compare it with 1st half
 bool isPalindrome(int n) {
-    int rev = 0;
-    while(n > rev) {
-        rev = rev*10 + n%10;
+    int halfRev = 0;
+    while(n > halfRev) {
+        halfRev = halfRev*10 + n%10;
         n = n/10;
     }
 
-    return rev == n;
+    return halfRev == n;
 }
