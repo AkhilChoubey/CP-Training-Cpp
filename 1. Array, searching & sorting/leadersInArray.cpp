@@ -1,5 +1,5 @@
 
-// Leader -- an element is a leader only if there is no element greater that that element on it's right side.
+// Leader -- an element is a leader only if there is no element greater than that element on it's right side.
 
 vector<int> leaders(vector<int> &nums)
 {

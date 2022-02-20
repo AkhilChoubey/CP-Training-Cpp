@@ -1,4 +1,4 @@
-// we are given with sorted array, we have to return frequency of each elementof the array.
+// we are given with sorted array, we have to return frequency of each element of the array.
 
 vector<pair<int, int>> frequenciesOfSortedArray(vector<int> &nums)
 {

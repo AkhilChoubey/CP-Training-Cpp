@@ -2,7 +2,7 @@
 // we are given with an array we have to find max diffrence of 2 elements.
 
 // Logic -- we will consider a min value element , and initialize it to arr[0] , and we will subtract it with each element,
-//  res = max (res, arr[i] - minVal) and if we find an element with valpe less than minVal , we will update
+//  res = max (res, arr[i] - minVal) and if we find an element with value less than minVal , we will update
 //  minVal to that element.
 
 int maxDiffrence(vector<int> &arr)
