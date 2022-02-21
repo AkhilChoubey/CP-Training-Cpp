@@ -7,13 +7,13 @@ int maximumSumSubarray(vector<int> &nums)
     {
         return 0;
     }
-    int maxEnding = arr[0];
-    int res = arr[0];
+    int maxEnding = nums[0];
+    int res = nums[0];
     for (int i = 1; i < nums.size(); i++)
     {
-        maxEnding = max(maxEnding + arr[i], arr[i]);
+        maxEnding = max(maxEnding + nums[i], nums[i]);
         res = max(res, maxEnding);
     }
 
-    return res;
+    return res; 
 }
