@@ -12,6 +12,7 @@ struct ListNode
 
 int length(ListNode *head)
 {
+    //counting number of nodes in linkedlist
     int count = 0;
     while (head != NULL)
     {
