@@ -8,6 +8,7 @@ struct TreeNode
     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right){} *
 };
 
+//helper function
 void topViewHeper(TreeNode *root, int horizontalLevel, int verticalLevel, map<int, pair<int, int>> &levelNodes)
 {
     if (root == NULL)
