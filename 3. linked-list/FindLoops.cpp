@@ -7,6 +7,11 @@ struct ListNode {
       ListNode(int x) : val(x), next(NULL) {}
   };
 
+// The algo known as floyd slow fast pointer approach , 
+// when slow pointer enters the loop , fast pointer was already in the loop 
+// and after every iteration there distance will increase by one , 
+// when there distance will become n (size of loop) , they will meet.
+
 bool hasCycle(ListNode *head) {
         
     if (head == NULL || head->next == NULL) {
