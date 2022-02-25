@@ -4,7 +4,7 @@
 // O(n) Logic -> we use the ASCII value of characters, we increase the count[s[i]] for each character,
 //               and first character in count with value is equal to one is our answer.
 
-const CHAR = 256;
+const int CHAR = 256;
 int leftmostNonRepeatingCharacter(string s)
 {
     if (s.size() == 0)
