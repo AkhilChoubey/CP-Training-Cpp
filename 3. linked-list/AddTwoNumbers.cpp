@@ -25,7 +25,7 @@ ListNode* addTwoNumbers(ListNode* a, ListNode* b) {
     int sum = 0, carry = 0;
     while (p != NULL || q != NULL)
     {
-        sum = (p == NULL)? 0 : p->val + (q == NULL)? 0 : q->val;
+        sum = (p == NULL)? 0 : p->val + (q == NULL)? 0 : q->val + carry;
         carry = sum / 10;
         sum = sum % 10;
         r->next = new ListNode(sum);

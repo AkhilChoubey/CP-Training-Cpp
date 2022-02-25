@@ -8,6 +8,7 @@
       ListNode(int x, ListNode *next) : val(x), next(next) {}
   };
  
+ // reccursive 
  ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) {
      if(list1 == NULL){
          return list2;
@@ -30,4 +31,45 @@
     }
 
     return temp;
+ }
+
+ //iterative - 3 pointer's approach
+ ListNode* mergeTwoLists(ListNode* list1 , ListNode *list2) {
+     if(list1 == NULL) {
+         return list2;
+     }
+     if(list2 == NULL) {
+         return list1;
+     }
+     ListNode* ptr1 = list1;
+     ListNode* ptr2 = list2;
+
+     ListNode* dummy = new ListNode(0);
+     ListNode* temp = dummy;
+
+    while(ptr1 != NULL && ptr2 != NULL) {
+        if(ptr1->val < ptr2->val) {
+            temp->next = ptr1;
+            ptr1 = ptr1->next;
+        }
+        else {
+            temp->next = ptr2;
+            ptr2 = ptr2->next;
+        }
+
+        temp = temp->next;
+    }
+
+    while(ptr1 != NULL) {
+        temp->next = ptr1;
+        temp = temp->next;
+        ptr1 = ptr1->next;
+    }
+    while(ptr2 != NULL) {
+        temp->next = ptr2;
+        temp = temp->next;
+        ptr2 = ptr2->next;
+    }
+
+    return dummy->next;
  }

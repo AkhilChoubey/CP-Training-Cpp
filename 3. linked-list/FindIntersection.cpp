@@ -10,7 +10,7 @@ using namespace std;
   };
 
 
-ListNode *getIntersectionNode(ListNode *headA, ListNode *headB) {
+ListNode* getIntersectionNode(ListNode *headA, ListNode *headB) {
         if(headA == NULL || headB == NULL) {
             return NULL;
         }
@@ -43,7 +43,7 @@ ListNode *getIntersectionNode(ListNode *headA, ListNode *headB) {
             }
         }
         
-        while(headA != NULL &&headB != NULL){
+        while(headA != NULL && headB != NULL){
             if(headA == headB){
                 
                 return headA;
