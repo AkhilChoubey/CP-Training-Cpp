@@ -17,6 +17,7 @@ using namespace std;
         
         ListNode* dummy = head;
         int count = 0;
+
         while(dummy != NULL) {
             count+=1;
             dummy = dummy->next;
@@ -25,9 +26,11 @@ using namespace std;
         if(k>count) {
             return NULL;
         }
+
         ListNode* fast = head;
         ListNode* slow = head;
         ListNode* slowPre = head;
+        
         while(k--) {
             fast = fast->next;
         }
