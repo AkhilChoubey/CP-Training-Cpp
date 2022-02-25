@@ -43,3 +43,39 @@ ListNode* addTwoNumbers(ListNode* a, ListNode* b) {
     
     
 }
+
+ListNode* addTwoNumbers(ListNode* a, ListNode* b) {
+    if(a == NULL) {
+        return b;
+    }
+    if(b == NULL) {
+        return a;
+    }
+
+    ListNode* ptr1 = a, *ptr2 = b;
+
+    ListNode* dummy = new ListNode(0);
+    ListNode* temp = dummy;
+
+    int sum = 0, carry = 0;
+
+    while(ptr1 != NULL || ptr2 != NULL || carry) {
+        if(ptr1 != NULL) {
+            sum += ptr1->val;
+            ptr1 = ptr1->next;
+        }
+        if(ptr2 != NULL) {
+            sum += ptr2->val;
+            ptr2 = ptr2->next;
+        }
+
+        sum += carry;
+        carry = sum/10;
+        sum = sum%10;
+
+        temp->next = new ListNode(sum);
+        temp = temp->next;
+    }
+
+    return dummy->next;
+}

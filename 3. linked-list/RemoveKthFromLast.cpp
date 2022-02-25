@@ -10,7 +10,7 @@ using namespace std;
   };
 
 
-  ListNode* removeNthFromEnd(ListNode* head, int k) {
+  ListNode* removeKthFromEnd(ListNode* head, int k) {
         if(head == NULL) {
             return NULL;
         } 
