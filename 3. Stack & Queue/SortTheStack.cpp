@@ -29,6 +29,12 @@ void sortStack(stack<int> &S)
         return;
     }
 
+    // int size = S.size();
+    // while(size--) {
+    //     int temp = S.top();
+    //     S.pop();
+    //     insertAtRightPosition(S, temp);
+    // }
     int temp = S.top();
     S.pop();
     sortStack(S);

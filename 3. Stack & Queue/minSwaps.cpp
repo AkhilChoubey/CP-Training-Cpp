@@ -34,5 +34,6 @@ int minSwaps(string str)
             }
         }
     }
+    // at the end open and close value will be same
     return (close + 1) / 2;
 }
