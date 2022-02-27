@@ -16,7 +16,7 @@ public:
     void push(int x)
     {
         q2.push(x);
-        while (!q1.empty)
+        while (!q1.empty())
         {
             q2.push(q1.front());
             q1.pop();
@@ -27,12 +27,12 @@ public:
     int pop()
     {
         int top = q1.front();
-        q1.top();
+        q1.pop();
         return top;
     }
     int top()
     {
-        return q1.top();
+        return q1.front();
     }
     bool empty()
     {

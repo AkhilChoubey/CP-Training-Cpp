@@ -5,7 +5,7 @@ using namespace std;
 
 // Logic -- For every opening parenthesis we will push the element ,
 //          then for every closing parenthesis we will check if S.top() is it's opening or not ,
-//          if it is we will popo the top of stack
+//          if it is we will pop() the top of stack
 bool validParenthesis(string s)
 {
     if (s.size() == 0)
