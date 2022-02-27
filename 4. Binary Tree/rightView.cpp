@@ -29,8 +29,8 @@ vector<int> rightView(TreeNode *root)
 
         if (root == NULL)
         {
-            result.push_back(current[current.size() - 1]);
-            current.clear();
+            result.push_back(currentLevel[currentLevel.size() - 1]);
+            currentLevel.clear();
             if (!Q.empty())
             {
                 Q.push(NULL);
@@ -38,7 +38,7 @@ vector<int> rightView(TreeNode *root)
         }
         else
         {
-            current.push_back(root->val);
+            currentLevel.push_back(root->val);
             if (root->left != NULL)
             {
                 Q.push(root->left);

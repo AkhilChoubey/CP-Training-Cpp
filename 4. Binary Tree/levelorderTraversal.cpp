@@ -33,7 +33,7 @@ vector<vector<int>> levelOrderTraversal(TreeNode *root)
         {
             result.push_back(currentLevel);
             currentLevel.clear();
-            if (!Q.empty)
+            if (!Q.empty())
             {
                 Q.push(NULL);
             }
