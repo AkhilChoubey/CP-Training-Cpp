@@ -109,7 +109,7 @@ vector<vector<int>> verticalOrder(TreeNode *root)
     {
         for (int j = 0; j < itr2->second.size(); j++)
         {
-            result[i].pusH_back(itr2->second[j].second);
+            result[i].push_back(itr2->second[j].second);
         }
         i++;
         itr2++;

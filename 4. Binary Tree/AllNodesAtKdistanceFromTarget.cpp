@@ -67,7 +67,7 @@ vector<int> distanceK(TreeNode *root, TreeNode *target, int k)
         if (root->right != NULL)
         {
             Q.push(root->right);
-            parent[Q.right];
+            parent[root->right] = root;
         }
     }
 

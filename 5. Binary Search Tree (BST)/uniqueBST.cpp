@@ -6,7 +6,7 @@ struct TreeNode
     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
 };
 
-// we are given with number n , we need to return number of unique BST , fourmed with number n.
+// we are given with number n , we need to return number of unique BST , formed with number n.
 // we can find the solution using catalan's number , catalan(i)  = catalan(i)*catalan(n - i - 1);
 
 // storing catalan value in map , so that we could use it later.
