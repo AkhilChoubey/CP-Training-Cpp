@@ -13,7 +13,7 @@ int leftmostRepeatingCharacter(string s)
         return 0;
     }
 
-    vector < int count(CHAR, 0);
+    vector<int> count(CHAR, 0);
 
     // incrementing value of count for each character
     for (int i = 0; i < s.size(); i++)

@@ -9,7 +9,7 @@ bool isPalindrome(string s)
     transform(s.begin(), s.end(), s.begin(), ::tolower);
     for (int i = 0; i < s.size(); i++)
     {
-        // if(s[i] < 'a' || s[i] > 'z' || s[i] < '0' || s[i] > '9') {
+        // if((s[i] < 'a' && s[i] > 'z') || (s[i] < '0' && s[i] > '9')) {
         if (!isalnum(s[i]))
         {
             s.erase(i, 1);
