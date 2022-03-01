@@ -3,7 +3,7 @@
 //  Ex - [7, 1, 5, 3, 6, 4]
 //  output : 7 (5-1 = 4 , 6 - 3 = 3) = 4 + 3 = 7
 
-// Logic : If the next element os greater than current element , it will give us profit and
+// Logic : If the next element is greater than current element , it will give us profit and
 //         we will add profit for all the cases where next element is greater than previous one.
 
 int maxProfit(vector<int> &prices)

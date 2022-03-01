@@ -60,3 +60,6 @@ int maxCircularSubArraySum(vector<int> &nums)
 
     return max(maxCircularSum, maxNormalSum);
 }
+
+// maximum circular subarray sum = max(normalSubarraySum, circularSumArraySum)
+// maxCircularSubarraySum = TotalSum - minSubarraySum
