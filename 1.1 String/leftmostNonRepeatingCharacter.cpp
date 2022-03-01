@@ -23,7 +23,7 @@ int leftmostNonRepeatingCharacter(string s)
     // checking and returing 1st charecter with count value 1.
     for (int i = 0; i < s.size(); i++)
     {
-        if (s[i] == 1)
+        if (count[s1[i]] == 1)
         {
             return i;
         }
