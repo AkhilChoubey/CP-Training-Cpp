@@ -37,3 +37,28 @@ bool hasCycle(ListNode *head) {
 
     return false;   
 }
+
+
+// O(n^2) solution
+// First write this solution **after this method use map instead of vector
+
+bool findLoops(ListNode* head) {
+    if(head == NULL) {
+        return false;
+    } 
+    vector<ListNode*> arr;
+
+    ListNode* temp = head;
+
+    while(temp != NULL) {
+        for(int i = 0; i < arr.size(); i++) {
+            if(arr[i] == temp->next) {
+                return true;
+            }
+        }
+         arr.push_back(temp);
+         temp = temp->next;
+
+    }
+    return false;
+}
