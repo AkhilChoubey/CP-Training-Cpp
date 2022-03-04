@@ -43,7 +43,7 @@ vector<pair<int, int>> mergeIntervals(vector<pair<int, int>> &intervals)
 
     for (int i = 1; i < intervals.size(); i++)
     {
-         if(areOverlapping(result.back(result.back(), intervals[i])) {
+         if(areOverlapping(result.back(), intervals[i])) {
             pair<int, int> overlapped = mergeOverlappingIntervals(result.back(), intervals[i]);
             result.pop_back();
             result.push_back(overlapped);

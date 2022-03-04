@@ -12,7 +12,7 @@ void insertAtRightPosition(stack<int> &S, int x)
     {
         int temp = S.top();
         S.pop();
-        insertAtRightPosition(S, temp);
+        insertAtRightPosition(S, x);
         S.push(temp);
     }
     else
