@@ -62,3 +62,27 @@ bool findLoops(ListNode* head) {
     }
     return false;
 }
+
+// method 3 : using map to store next pointer of each node
+bool findLoops(ListNode* head) {
+    if(head == NULL) {
+        return false;
+    } 
+    // vector<ListNode*> arr;
+    map<ListNode*, ListNode*> m;
+
+    ListNode* temp = head;
+
+    while(temp != NULL) {
+        // for(int i = 0; i < arr.size(); i++) {
+            if(m.find(temp) != m.end()) {
+                return true;
+            }
+        // }
+        //  arr.push_back(temp);
+        m[temp] = temp->next;
+         temp = temp->next;
+
+    }
+    return false;
+}
