@@ -36,4 +36,5 @@ bool checkPalingromeAfter1insertion(string s) {
         start++;
         end--;
     }
+    return true;
 }

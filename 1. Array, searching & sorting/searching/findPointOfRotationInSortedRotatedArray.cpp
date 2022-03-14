@@ -18,10 +18,10 @@ int pointOfRotation(vector<int> arr) {
     while(start <= end) {
         mid = (start + end) / 2;
 
-        if(arr[i] < last) {
+        if(arr[mid] < last) {
             end = mid - 1;
         }
-        else if(arr[i] > last) {
+        else if(arr[mid] > last) {
             start = mid + 1;
         }
         else {

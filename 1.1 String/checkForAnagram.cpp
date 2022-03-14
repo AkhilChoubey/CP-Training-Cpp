@@ -27,7 +27,7 @@ bool anagramCheck(string &s1, string &s2)
     // checking if all count array value is 0 or not , if 0 return true else false.
     for (int i = 0; i < CHAR; i++)
     {
-        if (count[i] != NULL)
+        if (count[i] != 0)
         {
             return false;
         }
