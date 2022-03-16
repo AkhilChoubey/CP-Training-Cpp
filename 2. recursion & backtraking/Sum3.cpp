@@ -1,8 +1,8 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-//Learn 1. STL Functions 2.How to use Comparator
 
+// O(n^2)
 
 vector<vector<int>> triplets(vector<int> &nums){
 	if(nums.size() <= 2){
@@ -13,32 +13,34 @@ vector<vector<int>> triplets(vector<int> &nums){
 	nums.end());
 	vector<vector<int>> result;
 	
-	for(int i=0;i< nums.size() -2; i++) {
+	for(int i=0; i < nums.size()-2; i++) {
 		int curr1 = nums[i];
 		int start = i+1, end = nums.size() -1;
 		
 		while(start<end){
 			int mid = start + (end - start) / 2;
 			if(curr1 + nums[start] + nums[end] == 0){
-				result.push_back(curr1, nums[start], nums[end]);
+				result.push_back({curr1, nums[start], nums[end]});
 				start++;
 				end++;
 				
-				while(start< end && nums[start -1] == nums[start]){
+				while(start < end && nums[start-1] == nums[start]){
 					start++;
 				}
 				
-				while(start < end && numss[end] == nums[end + 1]){
-					end--;
-				}
-				else if(curr1 + nums[start] + nums[end] < 0) {
-					start++;
-				}
-				else {
-					// curr1 + nums[start] + nums[end] > 0
+				while(start < end && nums[end] == nums[end + 1]){
 					end--;
 				}
 			}
+			else if(curr1 + nums[start] + nums[end] < 0) {
+				start++;
+			}
+			else {
+				// curr1 + nums[start] + nums[end] > 0
+				end--;
+			}
 		}
 	}
+	return result;
 }
+

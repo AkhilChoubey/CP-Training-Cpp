@@ -1,4 +1,6 @@
 
+// time complexity : O(n!)
+
 void permute(string &s, int i = 0) {
     if(i == s.size()-1) {
         cout<<s<<" "; // you can push it in result vector if asked

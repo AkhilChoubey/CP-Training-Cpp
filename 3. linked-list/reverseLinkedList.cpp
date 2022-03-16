@@ -9,7 +9,7 @@ using namespace std;
       ListNode(int x, ListNode *next) : val(x), next(next) {}
   };
 
-ListNode* revereList(ListNode* head) {
+ListNode* reverseList(ListNode* head) {
     if (head == NULL)
     {
         return NULL;

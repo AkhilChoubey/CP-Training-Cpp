@@ -8,7 +8,7 @@ struct TreeNode
     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
 };
 
-vector<int> preorder(TreeNode *root, vector<int> &result)
+vector<int> postorder(TreeNode *root, vector<int> &result)
 {
     if (root = NULL)
     {
